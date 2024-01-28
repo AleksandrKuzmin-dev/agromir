@@ -1,0 +1,1091 @@
+@import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+
+/* Cлайдер */
+
+/* Точки */
+
+.slick-dots {
+    bottom: -70px;
+
+    & li {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: all 0.4s ease;
+        
+        & button::before{
+            opacity: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    & li.slick-active {
+        border: 1px solid #62B944;
+    }
+}
+
+/* Настройки для слайдера на темном фоне */
+.black-section .slick-dots {
+
+    & li.slick-active {
+        border: 1px solid #1A6CB5;
+
+        & button::before{
+            color: white;
+         }
+    }
+
+    & button::before{
+        color: white;
+     }
+
+}
+
+/* Стрелки слайдера */
+
+.slider-arrows {
+    position: relative;
+    display: flex;
+    gap: 8px;
+}
+
+.slick-prev, .slick-next {
+    position: absolute;
+    left: unset;
+    top: unset;
+    bottom: -80px;
+    width: 60px;
+    height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #62B944;
+
+
+    &::before {
+        content: " ";
+        
+    }
+}
+
+.slick-prev {
+    
+    right: 100px;
+    background: no-repeat center url('../img/main__arrow-prev.svg');
+
+    &:hover, &:focus {
+        color: unset;
+        background: no-repeat center url('../img/main__arrow-prev.svg');
+    }
+}
+
+.slick-next {
+    background: no-repeat center url('../img/main__arrow-next.svg');
+    right: 20px;
+
+    &:hover, &:focus {
+        color: unset;
+        background: no-repeat center url('../img/main__arrow-next.svg');
+    }
+}
+
+
+/* Cтрелки слайдера на темном фоне */
+
+
+.black-section .slick-prev {
+    background: no-repeat center url('../img/main__slider-prev-white.svg');
+    border: 1px solid white !important;
+    &:hover, &:focus {
+        background: no-repeat center url('../img/main__slider-prev-white.svg');
+    }
+
+}
+
+.black-section .slick-next {
+    background: no-repeat center url('../img/main__slider-next-white.svg');
+    border: 1px solid white !important;
+    &:hover, &:focus {
+        background: no-repeat center url('../img/main__slider-next-white.svg');
+    }
+
+}
+
+/* Общие блоки */
+
+.container {
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 0 50px;
+
+    &_1630{
+        max-width: 1630px;
+    }
+    &_left {
+        max-width: unset;
+        padding-left: 0;
+        margin: 0;
+    }
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+        width: 364px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__menu-item {
+        padding: 8px 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        border-radius: 2px 15px 2px 2px;
+        transition: background 0.2s linear;
+
+        &:hover{
+            background-color: #62B944;
+            
+        }
+    }
+
+    &__burger-icon {
+        width: 45px;
+    }
+}
+
+.title-h2 {
+    color: #1D1D1B;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 125% */
+    text-transform: uppercase;
+
+    &_white{
+        color: white;
+    }
+}
+
+.title-h2-wrapper{
+   
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+
+    &__see-more {
+        color: #1A6CB5;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+        min-width: max-content;
+        &_green {
+            color: #62B944;
+        }
+    }
+}
+
+.black-section {
+    background-color: #1D1D1B;
+}
+
+
+
+
+/* Главная страница */
+.container-first-window {
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 20px 50px 0 50px;
+}
+.first__window-backround {
+    height: 100vh;
+    background-color: #62B944;
+}
+.first-window {
+    background: no-repeat url(../img/main__first-window-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #FFF;
+    border-radius: 0px 0px 10vw 0px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 98px; 
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__title-img {
+        border-radius: 0px 0px 30px 0px;
+        margin: 0 30px;
+        padding-top: 10px;
+    }
+
+    &__logo-atlantica {
+        width: 212px;
+    }
+}
+
+
+.welcome-agromir {
+    text-align: center;
+    margin-bottom: 120px;
+    
+
+    &__bg {
+        background-color: #62B944;
+        margin-left: 4vw;
+        display: flex;
+        align-items: center;
+        border-radius: 0 0 0 10vw;
+    }
+
+    &__title {
+        padding-top: 146px;
+        color: #FFF;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: 17px;
+    }
+
+    &__text {
+        color: #000;       
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 40px; /* 137.931% */
+        margin-bottom: 150px;
+        max-width: 1115px;
+    }
+
+    &__img {
+        width: 597px;
+    }
+}
+
+.consultation {
+    background-color: #EAEAEA;
+    margin-bottom: 120px;
+    &__bg {
+        background: no-repeat url('../img/main__agroconsultation-bg.svg');
+        background-position: center;
+        background-size: cover;
+        padding: 76px 0;
+    }
+
+    &__wrapper {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        color: #1D1D1B;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__form-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+        width: 50%;
+    }
+
+    &__input {
+        height: 56px;
+        background-color: #FFF;
+        border-radius: 0 0 60px 0;
+        padding: 16px 40px 16px 20px;
+
+        color: #656565;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 28px; /* 164.706% */
+    }
+
+    &__privacy {
+        color: #656565;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__privacy_mobile {
+        display: none;
+    }
+
+    &__privacy-link {
+        color: #1A6CB5;
+        text-decoration: underline !important;
+    }
+
+    &__btn {
+        border-radius: 0px 0px 19.2px 0px;
+        height: 56px;
+        background: #62B944;
+        color: #FFF;
+        font-size: 17px;
+        line-height: 28px; /* 164.706% */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s linear;
+
+        &:hover{
+            background: #509837;
+        }
+    }
+
+    &__btn-img {
+        padding-left: 20px;
+    }
+}
+
+
+.advantages {
+    margin-bottom: 120px;
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        max-width: 350px;
+        flex: 0 0 auto;
+    }
+
+    &__card-img {
+        width: 129px;
+        margin-bottom: 20px;
+    }
+
+    &__card-title {
+        color: #62B944;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px; /* 160% */
+        margin-bottom: 15px;
+    }
+
+    &__card-text {
+        color: #292927;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px; /* 160% */
+    }
+}
+
+.system-nutrition {
+    margin-bottom: 150px;
+
+    &__title-wrapper{
+        padding-top: 150px;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__card:hover &__card-img-wrapper{
+        background: #1B1B1B; 
+    }
+
+    &__card-img-wrapper {
+        border-radius: 0px 5vw;
+        background: #272727;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 37px;
+        margin-bottom: 50px;
+        transition: background 0.2s ease-in;
+    }
+
+
+    &__card-img {
+        width: 512px;
+        
+    }
+
+    &__card-title {
+        color: #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 40px; /* 166.667% */
+    }
+}
+
+.recommendations {
+    margin-bottom: 150px;
+    position: relative;
+
+    &__card {
+        padding: 30px;
+        background-color: #F6F6F6;
+        margin-right: 20px;
+        width: calc(26vw + 7px);
+        border-radius: 0 5vw 0 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 0px;
+            max-height: 0px;
+            background: #62B944;
+            transition: all 0.4s ease;
+        }
+
+        &:hover::after{
+            height: 15px;
+            max-height: 15px;
+        }
+    }
+
+    &__card-subtitle {
+        color: #62B944;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+    }
+
+    &__card-title {
+        color: #292927;
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 40px; /* 121.212% */
+        margin-bottom: 23px;
+        height: 80px;
+    }
+
+    &__card-img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.news {
+    margin-bottom: 170px;
+
+    &__card {
+        width: 30vw;
+        height: 30vw;
+        position: relative;
+        margin-right: 30px;
+        transition: border-radius 0.1s ease-in;
+        &:hover {
+            border-radius: 0 0 0 5vw;
+        }
+
+        &:hover .news__card-photo {
+            border-radius: 0 5vw 0 5vw;
+        }
+
+        &::before{
+            position: absolute;
+            bottom: -1px;
+            left: -1px;
+            height: 70%;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+            content: '';
+            width: calc(100% + 2px);
+            z-index: 1;
+            border-radius: inherit;
+        }
+    }
+
+    &__card-title-wrapper{
+        position: absolute;
+        z-index: 1;
+        bottom: 20px;
+        left: 40px;
+        height: 150px;
+    }
+
+    &__card-date {
+        color: #FFF;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 26px; /* 123.81% */
+        margin-bottom: 20px;
+    }
+
+    &__card-title {
+        color: #FFF;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 26px; /* 123.81% */
+    }
+
+    &__card-photo {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transition: border-radius 0.1s ease-in;
+    }
+}
+
+.research {
+    padding-bottom: 120px;
+    margin-bottom: 120px;
+    
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__left-wrapper {
+        width: 50vw;
+        border-radius: 0px 0px 5vw 0px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 5vw 0px;
+        
+    }
+
+    &__right-wrapper {
+        width: 50vw;
+    }
+
+    &__titile {
+        color: #1A6CB5;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 26px; /* 123.81% */
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px; /* 125% */
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        width: 95px;
+        height: 56px;
+        border-radius: 0px 0px 19.2px 0px;
+        background: #1A6CB5;
+    }
+
+}
+
+.education {
+
+		&__wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px
+		}
+
+		&__video {
+            position: relative;
+            width: 45vw;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: inherit;
+                height: 100%;
+                background-color: #000;
+                opacity: 0.3;
+                min-height: inherit;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0px;
+                width: 100%;
+                background: #62B944;
+                z-index: 5;
+
+                transition: height 0.4s ease;
+            }
+
+            &:hover::after{
+                height: 15px;
+            }
+
+            
+		}
+
+        &__video-poster{
+            width: 100%;
+            min-height: inherit;
+        }
+
+        &__video-title{
+            position: absolute;
+            left: 25px;
+            bottom: 50px;
+            color: #FFF;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 26px; /* 123.81% */
+            z-index: 1;
+        }
+
+        &__play {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+}
+
+
+
+
+
+
+
+/* Медиа запросы */
+
+@media (max-width: 1760px){
+    .header {
+        &__menu{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1630px) {
+    .advantages {
+
+        &__title {
+            text-align: center;
+        }
+        &__cards {
+            justify-content: center;
+            gap: 60px;
+        }
+        &__card {
+            max-width: 500px;
+        }
+    }
+}
+
+@media (max-width: 1500px){
+
+    .header{
+        &__logo {
+            width: 300px;
+        }
+    }
+    .first-window {
+        &__title{
+            font-size: 45px;
+            line-height: 130%;
+        }
+
+        &__title-img{
+            width: 100px;
+        }
+
+        &__logo-atlantica {
+            width: 160px;
+        }
+    }
+    .slick-prev, .slick-next {
+        width: 45px;
+        height: 45px;
+        bottom: -70px;
+    }
+
+    .slick-prev {
+        right: 75px;
+    }
+
+    .recommendations {
+
+        &__card-title {
+            font-size: 20px;
+            line-height: unset;
+            height: 50px;
+        }
+
+        &__card-subtitle {
+            font-size: 16px;
+            line-height: unset;
+            height: 52px;
+        }
+    }
+
+    .news {
+        &__card {
+            width: 390px;
+            height: 390px;
+        }
+
+        &__card-title-wrapper {
+            left: 20px;
+            bottom: -5px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .welcome-agromir {
+
+        &__title {
+            padding-top: 100px;
+        }
+        &__text{
+            font-size: 22px;
+            line-height: unset;
+            margin-bottom: 60px;
+        }
+
+        &__img {
+            width: 400px;
+        }
+    }
+
+    .advantages {
+
+        &__card {
+           max-width: 390px;
+        }
+    }
+
+    .research{
+
+        &__text {
+            font-size: 22px;
+            line-height: unset;
+        }
+    }
+
+    .education{
+        &__play {
+            width: 50px;
+        }
+
+        &__video-title{
+            font-size: 18px;
+            line-height: unset;
+            bottom: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 960px) {
+
+    .header {
+        &__logo {
+            width: 200px;
+        }
+    }
+
+    .title-h2{
+        font-size: 30px;
+    }
+    .first-window {
+        &__title{
+          font-size: 30px;
+        }
+
+        &__title-img{
+           padding: 0;
+           margin: 0 15px;
+        }
+
+        &__logo-atlantica {
+            width: 120px;
+        }
+    }
+
+    .welcome-agromir {
+        &__bg {
+            margin-left: 0;
+        }
+    }
+
+    .consultation {
+        
+        &__form {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__form-wrapper {
+            width: 390px;
+        }
+
+        &__privacy {
+            display: none;
+            text-align: center;
+        }
+
+        &__privacy_mobile {
+            display: block;
+        }
+    }
+
+    .advantages {
+
+        &__title{
+            text-align: left;
+        }
+
+        &__card {
+           max-width: 90vw;
+        }
+    }
+
+    .system-nutrition {
+        &__cards {
+            flex-direction: column;
+        }
+
+        &__card-img-wrapper {
+            margin-bottom: 20px;
+        }
+
+        &__card {
+            width: 390px;
+        }
+
+        &__card-title {
+            font-size: 18px;
+        }
+    }
+
+    .title-h2-wrapper {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .recommendations {
+        &__card {
+            width: 280px;
+        }
+    }
+
+    .research{
+        padding-bottom: 0;
+
+      &__wrapper{
+        flex-direction: column-reverse;
+      }
+
+      &__left-wrapper{
+        width: 100vw;
+        height: 45vw;
+        min-height: 220px;
+      }
+
+      &__right-wrapper{
+        width: unset;
+        
+      }
+    }
+
+    .container_left {
+        padding-left: 50px;
+    }
+
+    .black-section {
+        border-radius: 0px 0px 5vw 0px;
+    }
+
+    .education{
+
+        &__wrapper{
+            flex-direction: column;
+        }
+
+        &__video {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .container-first-window {
+        padding: 20px 20px 0 20px;
+    }
+
+    .header {
+        &__logo {
+            width: 160px;
+        }
+
+    }
+
+    .title-h2{
+        font-size: 26px;
+    }
+    .first-window {
+
+        &__content {
+            width: 320px;
+        }
+        &__title {
+            font-size: 26px;
+        }
+
+        &__title-img {
+            width: 80px;
+        }
+        &__logo-atlantica {
+            width: 100px;
+        }
+    }
+
+    .welcome-agromir {
+
+      
+        &__text{
+            font-size: 18px;
+        }
+
+        &__img {
+            width: 240px;
+        }
+    }
+
+    .advantages {
+
+        &__card-img{
+            max-width: 90px;
+        }
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .consultation {
+        &__form-wrapper {
+            max-width: 300px;
+        }
+    }
+
+    .system-nutrition {
+
+        &__cards {
+            align-items: center;
+        }
+        &__card {
+            width: 280px;
+        }
+    }
+
+    .news {
+        &__card {
+            width: 280px;
+            height: 280px;
+        }
+        &__card-title-wrapper{
+            height: unset;
+            bottom: 15px;
+        }
+
+        &__card-date {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        &__card-title{
+            font-size: 18px;
+        }
+    }
+
+    .research {
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
+
