@@ -142,6 +142,17 @@ a {
   color: white;
 }
 
+/* Слайдер с цифрами вместо точек */
+.gallery .slick-dots button {
+  color: black;
+  font-size: 16px;
+  width: 34px;
+  height: 34px;
+}
+.gallery .slick-dots button::before {
+  content: "";
+}
+
 /* Стрелки слайдера */
 .slider-arrows {
   position: relative;
@@ -213,7 +224,12 @@ a {
 }
 .container_left {
   max-width: unset;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
+}
+.container_right {
+  max-width: unset;
+  padding: 0;
   margin: 0;
 }
 
@@ -229,7 +245,7 @@ a {
           justify-content: space-between;
 }
 .header__logo {
-  width: 364px;
+  width: 300px;
 }
 .header__menu {
   display: -webkit-box;
@@ -251,6 +267,9 @@ a {
 }
 .header__menu-item:hover {
   background-color: #62B944;
+}
+.header__menu-item_white:hover {
+  color: #FFF;
 }
 .header__burger-icon {
   width: 45px;
@@ -737,6 +756,7 @@ a {
 }
 .research__right-wrapper {
   width: 50vw;
+  padding-right: 20px;
 }
 .research__titile {
   color: #1A6CB5;
@@ -1188,6 +1208,170 @@ a {
   cursor: pointer;
 }
 
+/* Страница о компании */
+.page-header {
+  padding-top: 20px;
+  margin-bottom: 96px;
+}
+
+.o-kompanii__title {
+  margin-bottom: 40px;
+}
+.o-kompanii__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+.o-kompanii__img {
+  border-radius: 0 0 5vw 0;
+}
+.o-kompanii__text {
+  width: 50vw;
+  color: #1D1D1B;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px; /* 156.25% */
+  padding-right: 20px;
+}
+
+.natural-agriculture {
+  text-align: center;
+  margin-bottom: 120px;
+  margin-top: -80px;
+}
+.natural-agriculture__bg {
+  background-color: #E5EDE9;
+  margin-left: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 0 10vw;
+}
+.natural-agriculture__title {
+  padding-top: 190px;
+  color: #1A6CB5;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 17px;
+}
+.natural-agriculture__text {
+  color: #000;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px; /* 137.931% */
+  margin-bottom: 45px;
+  max-width: 1115px;
+}
+.natural-agriculture__img {
+  width: 597px;
+}
+
+.resources {
+  margin-bottom: 120px;
+}
+.resources__title {
+  margin-bottom: 40px;
+}
+.resources__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+.resources__img {
+  border-radius: 0 0 0 5vw;
+}
+.resources__text {
+  width: 50vw;
+  color: #1D1D1B;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px; /* 156.25% */
+  padding-left: 50px;
+}
+
+.stable-production {
+  margin-bottom: 120px;
+}
+.stable-production__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+.stable-production__img {
+  border-radius: 0 0 5vw 0;
+}
+.stable-production__text {
+  width: 50vw;
+  color: #1D1D1B;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px; /* 156.25% */
+  padding-right: 20px;
+}
+
+.gallery {
+  margin-bottom: 100px;
+}
+.gallery__card {
+  width: 800px;
+  margin-right: 20px;
+}
+
+/* Страница каталог */
+.category {
+  margin-bottom: 120px;
+}
+.category__title {
+  color: #1D1D1B;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 64px; /* 133.333% */
+  margin-bottom: 50px;
+}
+.category__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+}
+.category__img-block {
+  margin-bottom: 20px;
+  border-radius: 0 0 5vw 0;
+  overflow: hidden;
+}
+.category__img {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.category__card:hover .category__img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.category__block-title {
+  color: #292927;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px; /* 166.667% */
+}
+
 /* Медиа запросы */
 @media (max-width: 1850px) {
   .header {
@@ -1198,6 +1382,10 @@ a {
   }
   .header__menu {
     display: none;
+  }
+  .page-header {
+    width: 100%;
+    padding: 20px 0 0 0;
   }
 }
 @media (max-width: 1630px) {
@@ -1254,8 +1442,29 @@ a {
     left: 20px;
     bottom: -5px;
   }
+  .o-kompanii__text {
+    font-size: 26px;
+    line-height: unset;
+  }
+  .resources__text {
+    font-size: 26px;
+    line-height: unset;
+  }
+  .stable-production__text {
+    font-size: 26px;
+    line-height: unset;
+  }
+  .natural-agriculture {
+    margin-top: -40px;
+  }
+  .natural-agriculture__text {
+    font-size: 26px;
+  }
 }
 @media (max-width: 1200px) {
+  .page-header {
+    margin-bottom: 60px;
+  }
   .welcome-agromir__title {
     padding-top: 100px;
   }
@@ -1326,6 +1535,31 @@ a {
   .menu__close {
     width: 30px;
     height: 30px;
+  }
+  .o-kompanii__text {
+    font-size: 22px;
+  }
+  .resources__text {
+    font-size: 22px;
+  }
+  .stable-production__text {
+    font-size: 22px;
+  }
+  .natural-agriculture {
+    margin-top: 60px;
+  }
+  .natural-agriculture__bg {
+    margin-left: 0;
+  }
+  .natural-agriculture__title {
+    padding-top: 60px;
+  }
+  .natural-agriculture__text {
+    font-size: 22px;
+    line-height: unset;
+  }
+  .natural-agriculture__img {
+    width: 400px;
   }
 }
 @media (max-width: 960px) {
@@ -1413,8 +1647,6 @@ a {
   }
   .research__right-wrapper {
     width: unset;
-  }
-  .container_left {
     padding-left: 50px;
   }
   .black-section {
@@ -1428,6 +1660,69 @@ a {
   }
   .education__video {
     width: 100%;
+  }
+  .o-kompanii__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .o-kompanii__img {
+    width: 100vw;
+    min-height: 220px;
+    max-height: 400px;
+  }
+  .o-kompanii__text {
+    width: unset;
+    font-size: 22px;
+    padding: 0 20px 0 50px;
+  }
+  .resources__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .resources__img {
+    width: 100vw;
+    min-height: 220px;
+    max-height: 350px;
+  }
+  .resources__text {
+    width: unset;
+    font-size: 22px;
+    padding: 0 20px 0 50px;
+  }
+  .stable-production__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .stable-production__img {
+    width: 100vw;
+    min-height: 220px;
+    max-height: 400px;
+  }
+  .stable-production__text {
+    width: unset;
+    font-size: 22px;
+    padding: 0 20px 0 50px;
+  }
+  .gallery__card {
+    width: 400px;
+  }
+  .category__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    line-height: unset;
+  }
+  .category__block-title {
+    font-size: 20px;
+    line-height: unset;
   }
 }
 @media (max-width: 640px) {
@@ -1499,6 +1794,36 @@ a {
   .menu__bottom-wrapper {
     padding-left: 50px;
   }
+  .o-kompanii__text {
+    padding-left: 20px;
+  }
+  .resources {
+    margin-bottom: 60px;
+  }
+  .resources__text {
+    padding-left: 20px;
+  }
+  .stable-production {
+    margin-bottom: 60px;
+  }
+  .stable-production__text {
+    padding-left: 20px;
+  }
+  .natural-agriculture {
+    margin-bottom: 60px;
+  }
+  .natural-agriculture__text {
+    font-size: 22px;
+  }
+  .natural-agriculture__img {
+    width: 240px;
+  }
+  .category__title {
+    font-size: 30px;
+  }
+  .category__cards {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 480px) {
   .consultation__form-wrapper {
@@ -1530,6 +1855,9 @@ a {
   .research__text {
     font-size: 18px;
   }
+  .research__right-wrapper {
+    padding-left: 15px;
+  }
   .footer-cta__title {
     font-size: 22px;
   }
@@ -1549,5 +1877,20 @@ a {
   }
   .menu__cta-title {
     font-size: 22px;
+  }
+  .o-kompanii__text {
+    font-size: 18px;
+  }
+  .natural-agriculture__text {
+    font-size: 18px;
+  }
+  .resources__text {
+    font-size: 18px;
+  }
+  .stable-production__text {
+    font-size: 18px;
+  }
+  .gallery__card {
+    width: 280px;
   }
 }/*# sourceMappingURL=style.css.map */
