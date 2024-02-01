@@ -1182,6 +1182,8 @@ a {
     }
 }
 
+
+
 .natural-agriculture {
 
     text-align: center;
@@ -1218,6 +1220,7 @@ a {
         width: 597px;
     }
 }
+
 
 .resources {
     margin-bottom: 120px;
@@ -1764,6 +1767,80 @@ a {
 }
 
 
+/* Страница Результаты применения */
+.specialists {
+
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: -80px;
+
+    &__bg {
+        background-color: #E5EDE9;
+        margin-left: 4vw;
+        display: flex;
+        align-items: center;
+        border-radius: 0 0 0 10vw;
+    }
+
+    &__text {
+        padding-top: 190px;
+        color: #000;       
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px; /* 137.931% */
+        margin-bottom: 45px;
+        max-width: 1115px;
+    }
+
+    &__img {
+        width: 597px;
+    }
+}
+
+.results {
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 160px;
+    }
+
+    &__img {
+        border-radius: 0 0 5vw 0;
+    }
+
+
+    &__text {
+        max-width: 540px;
+        color: #1D1D1B;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 50px; /* 156.25% */
+        padding-right: 20px;
+    }
+}
+
+.experience {
+    margin-bottom: 120px;
+
+    &__cards {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__card {
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 0px 50px 0px 0px;
+
+    }
+}
+
+
+
 
 
 /* Медиа запросы */
@@ -1866,6 +1943,13 @@ a {
         }
     }
 
+    .results {
+        &__text {
+            font-size: 26px;
+            line-height: unset;
+        }
+    }
+
     .resources {
         &__text {
             font-size: 26px;
@@ -1882,13 +1966,19 @@ a {
 
     .natural-agriculture {
         margin-top: -40px;   
-    }
-
-    .natural-agriculture {
         &__text{
             font-size: 26px;
         }
     }
+
+    .specialists {
+        margin-top: -40px;   
+        &__text{
+            font-size: 26px;
+        }
+    }
+
+
 
     .catalog {
         &__filters {
@@ -1913,6 +2003,12 @@ a {
             font-size: 16px;
             line-height: unset;
             height: 52px;
+        }
+    }
+
+    .results {
+        &__wrapper {
+            gap: 60px;
         }
     }
 }
@@ -2017,6 +2113,12 @@ a {
         }
     }
 
+    .results {
+        &__text {
+            font-size: 22px;
+        }
+    }
+
     .resources {
         &__text {
             font-size: 22px;
@@ -2038,6 +2140,23 @@ a {
             padding-top: 60px;
         }
         &__text {
+            font-size: 22px;
+            line-height: unset;
+        }
+
+        &__img{
+            width: 400px;
+        }
+    }
+
+    .specialists {
+        margin-top: 60px;
+        &__bg{
+            margin-left: 0;
+        }
+        
+        &__text {
+            padding-top: 60px;
             font-size: 22px;
             line-height: unset;
         }
@@ -2248,6 +2367,26 @@ a {
         }
     }
 
+    .results {
+
+        &__wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__img{
+            
+            width: 100vw;
+            min-height: 220px;
+            max-height: 400px;
+        }
+        &__text {
+            width: unset;
+            font-size: 22px;
+            padding: 0 20px 0 50px;
+        }
+    }
+
     .resources {
         &__wrapper {
             flex-direction: column-reverse;
@@ -2361,6 +2500,27 @@ a {
         }
     }
 
+    .results {
+        &__wrapper {
+            align-items: flex-start;
+        }
+        &__text {
+            max-width: unset;
+        }
+    }
+
+    .experience { 
+        &__cards {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__card{
+            width: 280px;
+        }
+
+    }
+
 }
 
 
@@ -2462,6 +2622,12 @@ a {
         }
     }
 
+    .results {
+        &__text {
+            padding-left: 20px;
+        }
+    }
+
     .resources {
         margin-bottom: 60px;
         &__text {
@@ -2476,6 +2642,17 @@ a {
         }
     }
     .natural-agriculture {
+        margin-bottom: 60px;
+        &__text{
+            font-size: 22px;
+        }
+
+        &__img{
+            width: 240px;
+        }
+    }
+
+    .specialists {
         margin-bottom: 60px;
         &__text{
             font-size: 22px;
@@ -2618,7 +2795,20 @@ a {
         }
     }
 
+    .results {
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
     .natural-agriculture {
+        &__text{
+            font-size: 18px;
+        }
+    }
+
+    .specialists {
         &__text{
             font-size: 18px;
         }

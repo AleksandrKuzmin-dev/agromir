@@ -1841,6 +1841,75 @@ a {
   margin: 0 auto;
 }
 
+/* Страница Результаты применения */
+.specialists {
+  text-align: center;
+  margin-bottom: 120px;
+  margin-top: -80px;
+}
+.specialists__bg {
+  background-color: #E5EDE9;
+  margin-left: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 0 10vw;
+}
+.specialists__text {
+  padding-top: 190px;
+  color: #000;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px; /* 137.931% */
+  margin-bottom: 45px;
+  max-width: 1115px;
+}
+.specialists__img {
+  width: 597px;
+}
+
+.results__title {
+  margin-bottom: 40px;
+}
+.results__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 160px;
+}
+.results__img {
+  border-radius: 0 0 5vw 0;
+}
+.results__text {
+  max-width: 540px;
+  color: #1D1D1B;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px; /* 156.25% */
+  padding-right: 20px;
+}
+
+.experience {
+  margin-bottom: 120px;
+}
+.experience__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+.experience__card {
+  -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0px 50px 0px 0px;
+}
+
 /* Медиа запросы */
 @media (max-width: 1850px) {
   .header {
@@ -1915,6 +1984,10 @@ a {
     font-size: 26px;
     line-height: unset;
   }
+  .results__text {
+    font-size: 26px;
+    line-height: unset;
+  }
   .resources__text {
     font-size: 26px;
     line-height: unset;
@@ -1927,6 +2000,12 @@ a {
     margin-top: -40px;
   }
   .natural-agriculture__text {
+    font-size: 26px;
+  }
+  .specialists {
+    margin-top: -40px;
+  }
+  .specialists__text {
     font-size: 26px;
   }
   .catalog__filters {
@@ -1944,6 +2023,9 @@ a {
     font-size: 16px;
     line-height: unset;
     height: 52px;
+  }
+  .results__wrapper {
+    gap: 60px;
   }
 }
 @media (max-width: 1200px) {
@@ -2024,6 +2106,9 @@ a {
   .o-kompanii__text {
     font-size: 22px;
   }
+  .results__text {
+    font-size: 22px;
+  }
   .resources__text {
     font-size: 22px;
   }
@@ -2044,6 +2129,20 @@ a {
     line-height: unset;
   }
   .natural-agriculture__img {
+    width: 400px;
+  }
+  .specialists {
+    margin-top: 60px;
+  }
+  .specialists__bg {
+    margin-left: 0;
+  }
+  .specialists__text {
+    padding-top: 60px;
+    font-size: 22px;
+    line-height: unset;
+  }
+  .specialists__img {
     width: 400px;
   }
   .category-page__wrapper {
@@ -2198,6 +2297,23 @@ a {
     font-size: 22px;
     padding: 0 20px 0 50px;
   }
+  .results__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .results__img {
+    width: 100vw;
+    min-height: 220px;
+    max-height: 400px;
+  }
+  .results__text {
+    width: unset;
+    font-size: 22px;
+    padding: 0 20px 0 50px;
+  }
   .resources__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -2289,6 +2405,24 @@ a {
   .product-recommendtaions__cards {
     grid-template-columns: 1fr 1fr;
   }
+  .results__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .results__text {
+    max-width: unset;
+  }
+  .experience__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .experience__card {
+    width: 280px;
+  }
 }
 @media (max-width: 640px) {
   .container {
@@ -2362,6 +2496,9 @@ a {
   .o-kompanii__text {
     padding-left: 20px;
   }
+  .results__text {
+    padding-left: 20px;
+  }
   .resources {
     margin-bottom: 60px;
   }
@@ -2381,6 +2518,15 @@ a {
     font-size: 22px;
   }
   .natural-agriculture__img {
+    width: 240px;
+  }
+  .specialists {
+    margin-bottom: 60px;
+  }
+  .specialists__text {
+    font-size: 22px;
+  }
+  .specialists__img {
     width: 240px;
   }
   .category__title {
@@ -2468,7 +2614,13 @@ a {
   .o-kompanii__text {
     font-size: 18px;
   }
+  .results__text {
+    font-size: 18px;
+  }
   .natural-agriculture__text {
+    font-size: 18px;
+  }
+  .specialists__text {
     font-size: 18px;
   }
   .resources__text {
