@@ -172,6 +172,10 @@ a {
     &_product {
         padding-left: 0;
     }
+
+    &_news {
+        padding-right: 0;
+    }
 }
 .header {
     display: flex;
@@ -890,10 +894,6 @@ a {
         }
     }
 
-    &__arrow-up {
-        
-    }
-
     &__arrow-up-bg{
         width: 50px;
         border-radius: 50%;
@@ -1533,10 +1533,6 @@ a {
         border: 1px solid #62B944;
     }
 
-    &__back-btn-icon {
-       
-    }
-
     &__back-btn-text {
         font-weight: 400;
         font-size: 28px;
@@ -1561,9 +1557,6 @@ a {
         top: 20px;
         min-width: 330px;
 
-    }
-
-    &__img {
     }
 
     &__info-wrapper {
@@ -1627,9 +1620,6 @@ a {
         color: #1d1d1b;
         margin-bottom: 40px;
         
-    }
-
-    &__btn-img {
     }
 
     &__advantages-block {
@@ -1840,6 +1830,165 @@ a {
 }
 
 
+/* Страница новости */
+
+.news-title-block {
+   margin-bottom: 80px;
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 590px;
+        background-color: #E5EDE9;
+        border-radius: 0 0 0 5vw;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 124%;
+        text-transform: uppercase;
+        text-align: center;
+        color: #1a6cb5;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 125%;
+        text-align: center;
+        color: #1d1d1b;
+        width: 782px;
+    }
+}
+
+
+/* Страница новости */
+.news-block {
+    margin-bottom: 100px;
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        margin-bottom: 80px;
+    }
+
+    &__card-wrapper {
+        display: flex;
+        gap: 120px;
+        justify-content: space-between;
+
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__card-text-wrapper {
+        flex: 50%;
+        padding-top: 50px;
+    }
+
+    &__card-date-block {
+        margin-bottom: 17px;
+    }
+
+    &__card-month {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 124%;
+        text-transform: uppercase;
+        color: #1a6cb5;
+    }
+
+    &__card-year {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 124%;
+        text-transform: uppercase;
+        color: #1a6cb5;
+    }
+
+    &__card-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 122%;
+        color: #1d1d1b;
+        margin-bottom: 20px;
+    }
+
+    &__card-description {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 165%;
+        color: #1d1d1b;
+        margin-bottom: 50px;
+    }
+
+    &__card-btn {
+        background-color: #1A6CB5;
+        width: 95px;
+        height: 56px;
+        border-radius: 0 0 19px 0;
+        transition: background-color .4s ease;
+
+        &:hover {
+            background-color: #18609F;
+        }
+    }
+
+    &__card-img-wrapper {
+        flex: 50%;
+        border-radius: 0 0 0 5vw;
+        overflow: hidden;
+        &_reverse {
+            border-radius: 0 0 5vw 0;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__navigation-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__navigation-item {
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &_active {
+            border: 1px solid #62B944;
+        }
+    }
+
+    &__navigation-item-value {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 165%;
+        text-align: center;
+        color: #000;
+    }
+
+
+}
+
+
+
 
 
 
@@ -2009,6 +2158,21 @@ a {
     .results {
         &__wrapper {
             gap: 60px;
+        }
+    }
+
+    .news-block {
+
+        &__card-wrapper{
+            align-items: center;
+        }
+
+        &__card-text-wrapper {
+            padding-top: unset;
+        }
+
+        &__card-title {
+            font-size: 28px;
         }
     }
 }
@@ -2207,6 +2371,60 @@ a {
 
         &__back-btn-text {
             font-size: 22px;
+        }
+    }
+
+    .news-title-block {
+
+        &__wrapper {
+            height: unset;
+            padding: 120px 20px;
+        }
+
+        &__description {
+            font-size: 22px;
+            width: unset;
+        }
+    }
+
+    .news-block {
+
+        &__cards {
+            flex-direction: row;
+            gap: 40px;
+        }
+        &__card-wrapper{
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        &__card {
+            flex: 50%;
+        }
+
+        &__card-img-wrapper {
+            max-height: 280px;
+            &_reverse {
+                border-radius: 0 0 0 5vw;
+            }
+        }
+
+        &__card-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        &__card-month {
+            font-size: 16px;
+        }
+
+        &__card-year {
+            font-size: 16px;
+        }
+
+        &__card-date-block {
+            margin-bottom: 10px;
         }
     }
 
@@ -2708,6 +2926,18 @@ a {
             height: unset;
         }
     }
+
+    .news-block {
+        &__cards {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        &__navigation-item {
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -2854,6 +3084,13 @@ a {
 
         &__btn {
             width: 100%;
+        }
+    }
+
+    .news-title-block {
+
+        &__description {
+            font-size: 18px;
         }
     }
 }
