@@ -2161,6 +2161,47 @@ a {
   color: #0c63e7;
 }
 
+/* Страница Обучение и Программы ПРИМЕНЕНИЯ ПО КУЛЬТУРАМ*/
+.training-page {
+  margin-bottom: 120px;
+}
+.training-page__title {
+  margin-bottom: 60px;
+}
+.training-page__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.training-page__card {
+  background: -webkit-gradient(linear, left top, left bottom, from(#D3EFDC), to(#ECF5EE));
+  background: linear-gradient(180deg, #D3EFDC 0%, #ECF5EE 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  border-radius: 0 0 5vw 0;
+  padding: 45px;
+}
+.training-page__card:hover {
+  background: #B6DCC2;
+}
+.training-page__card_programms {
+  gap: 20px;
+}
+.training-page__card-title {
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 121%;
+  color: #1d1d1b;
+}
+
 /* Медиа запросы */
 @media (max-width: 1850px) {
   .header {
@@ -2288,6 +2329,18 @@ a {
   }
   .news-block__card-title {
     font-size: 28px;
+  }
+  .training-page__card-title {
+    font-size: 28px;
+  }
+  .training-page__card-img {
+    width: 80px;
+    height: 80px;
+  }
+  .training-page__card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 @media (max-width: 1200px) {
@@ -2520,6 +2573,13 @@ a {
   }
   .contacts__card-fields {
     gap: 7px;
+  }
+  .training-page__card-title {
+    font-size: 22px;
+  }
+  .training-page__card-img {
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 960px) {
@@ -2770,6 +2830,18 @@ a {
   .contacts__cards-wrapper {
     grid-template-columns: 1fr;
   }
+  .training-page__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .training-page__card-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .training-page__card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 @media (max-width: 640px) {
   .container {
@@ -2914,6 +2986,9 @@ a {
   .news-block__navigation-item {
     min-width: 30px;
     min-height: 30px;
+  }
+  .training-page__cards {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 480px) {

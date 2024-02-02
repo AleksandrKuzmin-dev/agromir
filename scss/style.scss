@@ -2065,6 +2065,51 @@ a {
 }
 
 
+/* Страница Обучение и Программы ПРИМЕНЕНИЯ ПО КУЛЬТУРАМ*/
+
+.training-page {
+    margin-bottom: 120px;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__card {
+        background: linear-gradient(180deg, #D3EFDC 0%, #ECF5EE 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 0 0 5vw 0;
+        padding: 45px;
+
+
+        &:hover {
+            background: #B6DCC2;
+        }
+
+        &_programms {
+            gap: 20px;
+        }
+
+    }
+
+    &__card-img {
+    }
+
+    &__card-title {
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 121%;
+        color: #1d1d1b;
+    }
+}
 
 
 
@@ -2251,6 +2296,20 @@ a {
 
         &__card-title {
             font-size: 28px;
+        }
+    }
+
+    .training-page {
+        &__card-title {
+            font-size: 28px;
+        }
+
+        &__card-img {
+            width: 80px;
+            height: 80px;
+        }
+        &__card {
+            justify-content: flex-start;
         }
     }
 }
@@ -2541,6 +2600,17 @@ a {
 
         &__card-fields {
             gap: 7px;
+        }
+    }
+
+    .training-page {
+        &__card-title {
+            font-size: 22px;
+        }
+
+        &__card-img {
+            width: 40px;
+            height: 40px;
         }
     }
 
@@ -2860,6 +2930,22 @@ a {
             grid-template-columns: 1fr;
         }
     }
+
+
+    .training-page {
+       &__cards {
+        grid-template-columns: 1fr 1fr;
+       }
+
+       &__card-title {
+        font-size: 18px;
+        font-weight: 600;
+       }
+
+       &__card {
+        justify-content: flex-start;
+       }
+    }
 }
 
 
@@ -3059,6 +3145,12 @@ a {
             min-height: 30px;
         }
     }
+
+    .training-page {
+        &__cards {
+         grid-template-columns: 1fr;
+        }
+     }
 }
 
 @media (max-width: 480px) {
