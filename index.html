@@ -430,6 +430,28 @@
             <img class="menu__close" src="./img/menu__close.svg" alt="закрыть">
         </div>
     </div>
+
+    <div class="modal-consultation none">
+        <div class="modal-consultation__wrapper">
+            <div class="modal-consultation__title-wrapper">
+                <h2 class="modal-consultation__title">Получите консультацию</h2>
+                <div class="modal-consultation__close">
+                    <img src="./img/modal__close.svg">
+                </div>
+            </div>
+            <form name="modal-consultation-form">
+                <div class="modal-consultation__inputs">
+                    <input type="text" class="modal-consultation__input" placeholder="Ваше имя" name="name" required>
+                    <input type="phone" class="modal-consultation__input" placeholder="Номер телефона" name="name" required>
+                </div>
+                <div class="modal-consultation__bottom-row">
+                    <p class="modal-consultation__privacy">Нажимая на кнопку “Заказать консультацию”, вы соглашаетесь
+                        с&nbsp;<a href="#" class="modal-consultation__privacy-link">политикой&nbsp;конфиденциальности</a></p>
+                    <button href="#" class="modal-consultation__button">Заказать консультацию <img class="modal-consultation__button-img" alt="стрелка" src="./img/main__btn-img.svg"></button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- Slick слайдер -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
