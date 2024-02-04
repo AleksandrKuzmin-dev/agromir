@@ -301,16 +301,16 @@
 
             <div class="container">
                 <div class="education__wrapper">
-                    <a href="#">
-                        <div class="education__video">
+                    <a>
+                        <div class="education__video" data-video="1">
                             <img class="education__video-poster" src="./img/main__kak-posadit-ogurci.jpg" alt="как посадить огурцы">
                             <img class="education__play" src="./img/main__play.png" alt="запустить видео">
                             <h3 class="education__video-title">Как посадить огурцы в теплице из поликарбоната</h3>
                         </div>
                     </a>
 
-                    <a href="#">
-                        <div class="education__video">
+                    <a>
+                        <div class="education__video" data-video="2">
                             <img class="education__video-poster" src="./img/main__kak-chasto-polivat-pomidori.jpg" alt="как часто поливать помидоры">
                             <img class="education__play" src="./img/main__play.png" alt="запустить видео">
                             <h3 class="education__video-title">Как часто поливать помидоры в теплице.</h3>
@@ -451,6 +451,13 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <div class="modal-video none">
+        <div class="modal-video__close"><img src="./img/menu__close.svg" alt="закрыть"></div>
+        <video class="modal-video__video" autoplay="none" controls>
+            <source clas="modal-video__video-src" src="./video/main__bg.mp4" type="video/mp4">
+        </video>
     </div>
     <!-- Slick слайдер -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
