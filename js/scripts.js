@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function openModal(){
             if(srcVideo) {
                 modal.children[0].src = srcVideo;
+                console.log(modal.children[0]);
             };
 
             modal.classList.remove('none');
@@ -52,6 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
    };
 
    modal('.header__burger-icon', '.menu', '.menu__close');
-   modal('[data-video="1"]', '.modal-video', '.modal-video__close', './video/main__bg.mp4');
-   modal('[data-video="2"]', '.modal-video', '.modal-video__close', './video/main__bg.mp4');
+   modal('[data-video="1"]', '.modal-video', '.modal-video__close', './video/modal__video.mp4');
+   modal('[data-video="2"]', '.modal-video', '.modal-video__close', './video/modal__video.mp4');
 });
