@@ -1091,6 +1091,10 @@ a {
         }
     }
 
+    &__copy {
+        width: 250px;
+    }
+
     
 }
 
@@ -2508,6 +2512,10 @@ a {
         &__menu {
             flex-wrap: wrap;
         }
+
+        &__copy {
+            width: unset;
+        }
     }
 
     .menu {
@@ -3122,6 +3130,12 @@ a {
         &__button{ 
             width: 390px;
             height: 54px;
+        }
+    }
+
+    .footer {
+        &__top-row{
+            margin-bottom: 70px;
         }
     }
 }

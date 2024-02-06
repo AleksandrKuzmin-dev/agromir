@@ -1169,6 +1169,9 @@ a {
 .footer__social-item-block:hover {
   background-color: #4D4D48;
 }
+.footer__copy {
+  width: 250px;
+}
 
 .menu {
   position: fixed;
@@ -2544,6 +2547,9 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .footer__copy {
+    width: unset;
+  }
   .menu {
     overflow-y: auto;
   }
@@ -3041,6 +3047,9 @@ a {
   .modal-consultation__button {
     width: 390px;
     height: 54px;
+  }
+  .footer__top-row {
+    margin-bottom: 70px;
   }
 }
 @media (max-width: 640px) {
